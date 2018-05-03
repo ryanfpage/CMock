@@ -72,6 +72,8 @@ class CMockHeaderParser
 
     # remove gcc's __attribute__ tags
     source.gsub!(/__attribute(?:__)?\s*\(\(+.*\)\)+/, '')
+    source.gsub!(/PRIVILEGED_FUNCTION/,'')
+    # remove
 
     # remove preprocessor statements and extern "C"
     source.gsub!(/^\s*#.*/, '')
